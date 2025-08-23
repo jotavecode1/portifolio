@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">INÍCIO</a></li>
+        <li><a href="#sobre">SOBRE</a></li>
+        <li><a href="#projetos">PROJETOS</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div class="titulo">
+        <h1>Olá, eu sou o</h1>
+        <span>João Vitor</span>
+        <p>Desenvolvedor Front-End</p>
+      </div>
+      <div class="foto">
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-celestino-5549ba374/" target="_blank">
+          <img src="img/eu.jpeg" alt="Foto de João Vitor" class="eu-img"/>
+        </a>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p class="p-sobre">
+        Sou desenvolvedor web apaixonado por criar sites e aplicações funcionais e bem estruturadas. Trabalho principalmente com HTML, CSS e JavaScript, e estou sempre ampliando meu conhecimento com novas tecnologias.
+      </p>
+    </section>
+
+    <section id="projetos">
+      <div class="comentario">
+        <h3 class="h3-projetos">Projetos</h3>
+        <p class="p-projetos">Aqui estão alguns dos meus projetos realizados nos últimos meses</p>
+      </div>
+
+      <div class="container-projetos">
+        <div class="projeto" onclick="abrirModal('clones')">
+          <h3>Clones</h3>
+          <img src="img/projeto-netflix.png" alt="Print do Projeto Netflix" class="img-projeto">
+        </div>
+        <div class="projeto" onclick="abrirModal('formularios')">
+          <h3>Formulários</h3>
+          <img src="img/form.png" alt="Print do Projeto Discord" class="img-projeto">
+        </div>
+        <div class="projeto" onclick="abrirModal('sites')">
+          <h3>Sites</h3>
+          <img src="img/igreja.png" alt="Print do Projeto Igreja" class="img-projeto">
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h4 class="h4-principal">Contatos</h4>
+      <div class="container-caixa">
+        <div class="email">
+          <p class="p-contato">devcode.jv@gmail.com</p>
+        </div>
+        <div class="telefone">
+          <p class="p-contato">(18) 98178-4826</p>
+        </div>
+        <div class="linkedin">
+          <p class="p-contato">LinkedIn: joao</p>
+        </div>
+        <div class="github">
+          <p class="p-contato">GitHub: joao</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por João Vitor © 2025</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="overlay" class="overlay" onclick="fecharModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h2 id="tituloModal"></h2>
+      <div id="conteudoModal"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

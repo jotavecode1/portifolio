@@ -1,0 +1,267 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #13131f;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  border-bottom: 3px solid #8257e6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #13131f;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 4rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: inline-block; /* necessário para o transform funcionar bem */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.05); 
+  color: #8257e6; 
+}
+
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+#inicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.titulo {
+  padding: 2rem 4rem;
+}
+
+.foto {
+  padding: 2rem 2rem 0 4rem;
+}
+
+.eu-img {
+  max-width: 400px;
+  border-radius: 100%;
+  border: 10px solid #8257e6;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.eu-img:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+span {
+  font-size: 2.5rem;
+  color: #8257e6;
+}
+
+p {
+  color: #828282;
+  font-size: 1.5rem;
+}
+
+#sobre {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  padding-top: 6rem;
+  color: white;
+  border-bottom: 3px solid #8257e6;
+}
+
+.p-sobre {
+  text-align: center;
+  padding: 3rem 4rem 0;
+  line-height: 1.6;
+}
+
+#projetos {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.container-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.projeto {
+  text-align: center;
+}
+
+h3 { 
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.img-projeto {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-top: 2rem;
+}
+
+.img-projeto:hover {
+  transform: scale(1.1);
+}
+
+.h3-projetos {
+  color: white;
+  font-size: 2.5rem;
+  border-bottom: 3px solid #8257e6;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.p-projetos {
+  text-align: center;
+  padding: 3rem;
+}
+
+#contato {
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+
+.h4-principal {
+  color: white;
+  font-size: 2.5rem;
+  border-bottom: 3px solid #8257e6;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.container-caixa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  padding: 3rem 0;
+}
+
+.email, .telefone, .linkedin, .github {
+  text-align: center;
+}
+
+.email-icon, .telefone-icon, .linkedin-icon, .github-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #212121;
+}
+
+.h4-contato {
+  padding: 0.5rem;
+  color: white;
+}
+
+.p-contato {
+  font-size: 19px;
+  color: #828282;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #828282;
+}
+
+
+
+/* === CSS do Modal === */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: #13131f;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.modal img {
+  border-radius: 5px;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.fechar:hover {
+  color: red;
+}
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #inicio {
+    flex-direction: column;
+  }
+
+  .container-caixa {
+    flex-direction: column;
+    align-items: center;
+  }
+}
