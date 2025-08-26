@@ -267,14 +267,43 @@ footer {
 
 
 
-/* Responsivo */
+/* 📱 Responsividade */
 @media (max-width: 768px) {
-  #inicio {
+  /* Menu vira coluna */
+  nav ul {
     flex-direction: column;
+    gap: 15px;
   }
 
-  .container-caixa {
+  nav ul li a {
+    font-size: 1.1em;
+  }
+
+  /* Centraliza os contatos */
+  .contato {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contato .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Modal mais compacto */
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Cabeçalho e títulos menores */
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
   }
 }
+
