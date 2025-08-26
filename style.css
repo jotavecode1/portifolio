@@ -92,7 +92,7 @@ p {
 }
 
 #sobre {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +100,7 @@ p {
 
 h2 {
   font-size: 2.5rem;
-  padding-top: 6rem;
+  padding-top: 8rem;
   color: white;
   border-bottom: 3px solid #8257e6;
 }
@@ -113,38 +113,14 @@ h2 {
 
 #projetos {
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 8rem 2rem;
 }
 
-.container-projetos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-.projeto {
-  text-align: center;
-}
 
 h3 { 
   color: white;
   font-size: 1.5rem;
   margin-top: 2rem;
-}
-
-.img-projeto {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  margin-top: 2rem;
-}
-
-.img-projeto:hover {
-  transform: scale(1.1);
 }
 
 .h3-projetos {
@@ -155,9 +131,45 @@ h3 {
   margin: 0 auto;
 }
 
+.container-projetos {
+  display: flex;
+  flex-direction: column;
+}
+
+.apresentacao {
+  display: flex;
+  justify-content: center;
+}
+
 .p-projetos {
   text-align: center;
   padding: 3rem;
+}
+
+.sites, .formularios, .clones {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.projeto-box {
+  margin-top: 15px;
+}
+
+.img-projeto {
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  
+}
+
+.img-projeto:hover {
+  transform: scale(1.1);
 }
 
 #contato {
@@ -165,41 +177,42 @@ h3 {
   padding-top: 6rem;
 }
 
-.h4-principal {
+.h4-contato {
   color: white;
   font-size: 2.5rem;
   border-bottom: 3px solid #8257e6;
   width: fit-content;
-  margin: 0 auto;
+  margin: 15px auto;
+  padding: 0.5rem;
 }
 
 .container-caixa {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  gap: 4rem;
+  gap: 7rem;
   padding: 3rem 0;
 }
 
 .email, .telefone, .linkedin, .github {
-  text-align: center;
-}
-
-.email-icon, .telefone-icon, .linkedin-icon, .github-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  background-color: #212121;
-}
-
-.h4-contato {
-  padding: 0.5rem;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .p-contato {
   font-size: 19px;
   color: #828282;
+  margin-top: 15px;
+}
+
+.icon {
+  color: #8257e6;
+}
+
+.icon:hover {
+  
 }
 
 footer {
