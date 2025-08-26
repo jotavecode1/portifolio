@@ -267,43 +267,54 @@ footer {
 
 
 
-/* 📱 Responsividade */
-@media (max-width: 768px) {
-  /* Menu vira coluna */
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav ul li a {
-    font-size: 1.1em;
-  }
-
-  /* Centraliza os contatos */
-  .contato {
-    flex-direction: column;
-    gap: 20px;
+/* 📱 Responsividade para celular */
+@media (max-width: 480px) {
+  /* Cabeçalho */
+  header h1 {
+    font-size: 1.5em;
     text-align: center;
   }
 
-  .contato .icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* Modal mais compacto */
-  .modal-content {
-    width: 90%;
-    padding: 15px;
-  }
-
-  /* Cabeçalho e títulos menores */
-  header h1 {
-    font-size: 1.8em;
-  }
-
   header h2 {
-    font-size: 1.2em;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /* Menu em coluna */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+    padding: 8px 0;
+  }
+
+  /* Ícones de contato */
+  .contato {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contato .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Modal ocupa quase toda a tela */
+  .modal-content {
+    width: 95%;
+    max-width: 350px;
+    padding: 10px;
+  }
+
+  /* Textos mais ajustados */
+  p {
+    font-size: 0.9em;
+    text-align: center;
   }
 }
 
