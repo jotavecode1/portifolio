@@ -50,11 +50,12 @@ ul li a {
 
 #inicio {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
+
 
 .titulo {
   padding: 2rem 4rem;
@@ -129,6 +130,7 @@ h3 {
   border-bottom: 3px solid #8257e6;
   width: fit-content;
   margin: 0 auto;
+
 }
 
 .container-projetos {
@@ -141,9 +143,8 @@ h3 {
   justify-content: center;
 }
 
-.p-projetos {
-  text-align: center;
-  padding: 3rem;
+.p-projetos-apresentacao {
+  margin-top: 50px;
 }
 
 .sites, .formularios, .clones {
@@ -186,7 +187,7 @@ h3 {
   padding: 0.5rem;
 }
 
-.container-caixa {
+.container-contato {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -222,99 +223,54 @@ footer {
 }
 
 
-
-/* === CSS do Modal === */
-.overlay {
+@media (max-width: 450px) {
+nav {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+ }
+
+ #inicio {
+  flex-direction: column;
+ }
+
+.titulo h1 {
+  font-size: 40px;
 }
 
-.modal {
-  background: #13131f;
-  padding: 20px;
-  max-width: 600px;
-  width: 90%;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+.titulo span {
+  font-size: 35px;
 }
 
-.modal img {
-  border-radius: 5px;
+.titulo p {
+  font-size: 22px;
 }
 
-.fechar {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
+ .eu-img {
+  width: 300px;
+ }
+
+ .p-sobre {
+  font-size: 22px;
+  text-align: center;
+ }
+
+ .container-projetos {
+  flex-direction: column;
+ }
+
+ .sites, .formularios, .clones {
+  flex-direction: column;
+ }
+
+ .container-contato {
+  flex-direction: column;
+ }
+
 }
 
-.fechar:hover {
-  color: red;
-}
+
+ 
 
 
 
 
-/* 📱 Responsividade para celular */
-@media (max-width: 480px) {
-  /* Cabeçalho */
-  header h1 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  header h2 {
-    font-size: 1em;
-    text-align: center;
-  }
-
-  /* Menu em coluna */
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  nav ul li a {
-    font-size: 1em;
-    padding: 8px 0;
-  }
-
-  /* Ícones de contato */
-  .contato {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .contato .icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  /* Modal ocupa quase toda a tela */
-  .modal-content {
-    width: 95%;
-    max-width: 350px;
-    padding: 10px;
-  }
-
-  /* Textos mais ajustados */
-  p {
-    font-size: 0.9em;
-    text-align: center;
-  }
-}
 
